@@ -31,6 +31,7 @@ button:hover {
     box-shadow: 0 0 5px white;
 }
 nav {
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -188,6 +189,7 @@ span {
 #space3 {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin-top: 50px;;
 }
 #skills {
@@ -204,9 +206,9 @@ span {
     transition: 2s;
 }
 #html p {
-    position: relative;
-    top: 75px;
-    left: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #css {
     width: 200px;
@@ -217,9 +219,9 @@ span {
     box-shadow: 0 0 20px;
 }
 #css p {
-    position: relative;
-    top: 75px;
-    left: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #js {
     width: 200px;
@@ -231,9 +233,9 @@ span {
     text-align: center;
 }
 #js p {
-    position: relative;
-    top: 75px;
-    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer {
     position: relative;
@@ -279,10 +281,11 @@ footer {
     #home {
         width: 100%;
         height: 300px;
-        background-size: contain;
+        background-size: cover;
     }
     #home > span {
-        font-size: 30px;
+        width: 100vw;
+        font-size: 25px;
         position: absolute;
         top: 130px;
         left: 25px;
@@ -294,8 +297,14 @@ footer {
         font-size: 10px;
     }
     nav ul {
-        flex-wrap: wrap;
-        /* justify-content: center; */
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a {
+        margin: 0px;
+    }
+    nav {
+        width: 100vw;
     }
 }
 #space {
@@ -338,11 +347,83 @@ footer {
     height: 100px;
     margin-top: 20px;
 }
+#ul2 {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+#ul2 li {
+    font-size: 10px;
+    margin-left: 0px;
+}
+#div3 ul {
+    position:  fixed;
+    left: 8px;
+    top: 300px;
+}
 @media screen and (max-width: 480px) {
      footer {
-         width: 100%;
+         width: 100vw;
+         /* overflow: hidden; */
      }
      #div3 {
          margin-right: 10px;
      }
+     #ul2 {
+        display: flex;
+        justify-content: center;
+    }
+    #ul2 li {
+        font-size: 10px;
+    }
+    nav {
+        width: 100vw;
+    }
+    nav ul li {
+        font-size: 10px;
+    }
+    nav ul li a {
+        font-size: 10px;
+
+    } 
+}
+@media screen and (max-width: 1000px) {
+    nav {
+        width: 100vw;
+    }
+    nav ul li {
+        font-size: 16px;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li a {
+        margin: 20px;
+    }
+    nav {
+        width: 100vw;
+    }
+    #home > span {
+        width: 100vw;
+        font-size: 25px;
+        position: absolute;
+        top: 130px;
+        left: 25px;
+    }
+    #home {
+        width: 100vw;
+        height: 300px;
+        background-size: cover;
+    }
+    #div3 ul {
+        position:  fixed;
+        left: 8px;
+        top: 150px;
+    }
+    #div3 ul li {
+        margin: 8px;
+        font-size: large;
+        
+    }
 }
